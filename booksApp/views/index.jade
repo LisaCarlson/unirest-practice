@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      .col-md-10.col-md-offset-1
+        h1.well Bestsellers Nonfiction
+    .row
+      .col-md-8.col-md-offset-2
+        for book in books
+          .panel.panel-info
+            .panel-heading
+              h3= book.title
+            .panel-body     
+              h4 by
+                =' ' + book.author
